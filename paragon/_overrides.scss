@@ -9,3 +9,82 @@
   display: none !important;
 }
 
+// main layout
+.layout {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+// main layout left column
+.layout {
+  > .d-flex {
+    width: 60% !important;
+    height: 100%;
+    background: black url("images/login-page-hero-image.png") no-repeat center !important;
+    background-size: cover !important;
+    > * { display: none }
+  }
+  > .bg-primary-400 { display: none }
+}
+
+// main layout right column
+.layout {
+  .content {
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    > div > div {
+      &:before {
+        content: "Level 8";
+        color: white;
+        font-family: ProximaNova-SemiBold;
+        font-size: 30px;
+        margin: 20;
+      }
+    }
+    > div:before {
+      content: "LEVEL8";
+      font-family: Arial;
+      color: white;
+      font-size: 30px;
+      font-weight: 500;
+      margin: 20px 20px 30px 20px;
+      display: block;
+    }
+    > div > div{
+      background-color: white;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    }
+    #controlled-tab-tab-/register { display: none }
+    #controlled-tab-tab-/login {
+      font-family: Arial;
+      color: #203952;
+      font-size: 22px;
+      line-height: 80px;
+      min-height: 80px;
+      padding: 0 10px 0 20px;
+      font-weight: 700;
+      border: none;
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+    }
+    .main-content { padding: 0 20px 20px 20px }
+    .pgn__form-control-floating-label {
+      font-family: Arial;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #425260;
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+      top: -10px;
+    }
+  }
+} 
