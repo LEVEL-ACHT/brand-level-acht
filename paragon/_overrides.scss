@@ -14,6 +14,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 // main layout left column
@@ -37,15 +38,6 @@
     justify-content: center;
   }
   .content {
-    > div > div {
-      &:before {
-        content: "Level 8";
-        color: white;
-        font-family: ProximaNova-SemiBold;
-        font-size: 30px;
-        margin: 20;
-      }
-    }
     > div:before {
       content: "LEVEL8";
       font-family: Arial;
