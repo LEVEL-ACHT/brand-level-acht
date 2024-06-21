@@ -1,6 +1,31 @@
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
 
+body {
+  background-color: #000;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  font-family: ProximaNova-SemiBold !important;
+}
+
+.btn-brand {
+    color: #fff;
+    background: #eec510 !important;
+    border-color: #eec510 !important;
+}
+
+.btn {
+    height: 40px;
+    padding: 8px 15px;
+    outline: none !important;
+    overflow: hidden;
+    min-width: 140px;
+    font-weight: 600;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 2px;
+}
 
 // Remove page top strip
 .extra-large-screen-top-stripe,
@@ -15,15 +40,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  overflow: hidden;
 }
 
 // main layout left column
 .layout {
   > .d-flex {
     width: 60% !important;
-    height: 100%;
-    background: black url("images/login-page-hero-image.png") no-repeat center !important;
+    height: min(100vh, 0.6* 100vw);
+    background: black url(images/login-page-hero-image.png) no-repeat center !important;
     background-size: cover !important;
+    flex-grow: 1;
     > * { display: none }
   }
   > .bg-primary-400 { display: none }
@@ -32,15 +59,22 @@
 // main layout right column
 .layout {
   .content {
+    margin: 0;
+    flex-grow: 1;
     width: 40%;
     height: 100%;
     align-items: center;
     justify-content: center;
+    display: flex;
+    overflow: hidden;
   }
   .content {
+    > div {
+        margin: 20px;
+    }
     > div:before {
       content: "LEVEL8";
-      font-family: Arial;
+      font-family: ProximaNova;
       color: white;
       font-size: 30px;
       font-weight: 500;
@@ -49,13 +83,12 @@
     }
     > div > div{
       background-color: white;
-      border: 1px solid transparent;
       border-radius: 2px;
       box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     }
     #controlled-tab-tab-\/register { display: none }
     #controlled-tab-tab-\/login {
-      font-family: Arial;
+      font-family: ProximaNova-SemiBold;;
       color: #203952;
       font-size: 22px;
       line-height: 80px;
@@ -67,16 +100,67 @@
       cursor: default;
       text-decoration: none;
     }
-    .main-content { padding: 0 20px 20px 20px }
-    .pgn__form-control-floating-label {
-      font-family: Arial;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: #425260;
-      font-size: 14px;
-      padding: 0;
-      margin: 0;
-      top: -10px;
+    .main-content {
+      padding: 0 20px 20px 20px
+      .mw-xs.mt-3.mb-2 {
+        margin-top: 0 !important;
+      }
+      #sign-in-form #forgot-password {
+        position: relative;
+        color: #40bbea !important;
+        top: -60px;
+        font-size: 12px;
+        width: auto;
+        padding: 0;
+        justify-content: left;
+      }
     }
   }
 } 
+
+.pgn__form-control-decorator-group {
+  margin-inline-end: 0;
+  input#emailOrUsername {
+    border-radius: 2px;
+  }
+  input#password {
+    border-radius: 2px;
+  }
+  .pgn__form-control-floating-label {
+    font-family: ProximaNova-SemiBold;;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #40bbea;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    top: -10px;
+    .pgn__form-control-floating-label-text {
+      transform: none !important;
+      font-size: 11px;
+    }
+  }
+}
+
+nav.pgn__tabs.nav.nav-tabs {
+    border: none;
+}
+
+button#sign-in {
+    position: relative;
+    top: 30px;
+}
+
+#forget-password-form {
+  max-width: 400px !important;
+  font-size: 14px !important;
+  .pgn-transition-replace-group.position-relative { display: none }
+  p {
+    color: #425260;
+    font-size: 13px;
+  }
+  h2.h4 {
+    color: #425260;
+    font-size: 16px;
+  }
+}
