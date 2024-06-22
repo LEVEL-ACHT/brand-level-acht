@@ -1,6 +1,13 @@
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
 
+@font-face {
+  font-family: 'ProximaNova-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: url("fonts-folder/fontawesome-webfont.woff2") format('woff2');
+}
+
 body {
   background-color: #000;
   min-width: 300px;
@@ -101,7 +108,7 @@ body {
       text-decoration: none;
     }
     .main-content {
-      padding: 0 20px 20px 20px
+      padding: 0 20px 20px 20px;
       .mw-xs.mt-3.mb-2 {
         margin-top: 0 !important;
       }
@@ -127,7 +134,7 @@ body {
     border-radius: 2px;
   }
   .pgn__form-control-floating-label {
-    font-family: ProximaNova-SemiBold;;
+    font-family: ProximaNova-SemiBold;
     font-weight: 800;
     text-transform: uppercase;
     color: #40bbea;
