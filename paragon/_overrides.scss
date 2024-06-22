@@ -27,7 +27,7 @@ body {
     padding: 8px 15px;
     outline: none !important;
     overflow: hidden;
-    min-width: 140px;
+    min-width: 140px !important;
     font-weight: 600;
     width: 100%;
     font-size: 13px;
@@ -46,7 +46,7 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: row !important;
   overflow: hidden;
 }
 
@@ -71,13 +71,14 @@ body {
     width: 40%;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
     display: flex;
     overflow: hidden;
   }
   .content {
     > div {
         margin: 20px;
+        max-width: 320px !important;
     }
     > div:before {
       content: "LEVEL8";
@@ -103,29 +104,39 @@ body {
       padding: 0 10px 0 20px;
       font-weight: 700;
       border: none;
-      pointer-events: none;
+      //pointer-events: none;
       cursor: default;
       text-decoration: none;
     }
     .main-content {
       padding: 0 20px 20px 20px;
+      min-width: 300px !important;
       .mw-xs.mt-3.mb-2 {
-        margin-top: 0 !important;
+        margin: 0 !important;
       }
-      #sign-in-form #forgot-password {
-        position: relative;
-        color: #40bbea !important;
-        top: -60px;
-        font-size: 12px;
-        width: auto;
-        padding: 0;
-        justify-content: left;
+      #sign-in-form {
+        #forgot-password {
+          position: relative;
+          color: #40bbea !important;
+          top: -60px;
+          font-size: 12px;
+          width: auto;
+          padding: 0;
+          justify-content: left;
+          height: auto !important;
+        }
+        .pgn__form-group:nth-child(1) {
+          margin: 20px 0px 50px;
+        }
+        .pgn__form-group:nth-child(2) {
+          margin: 0 0 20px 0;
+        }
       }
     }
   }
 } 
 
-.pgn__form-control-decorator-group {
+.layout .pgn__form-group .pgn__form-control-decorator-group {
   margin-inline-end: 0;
   input#emailOrUsername {
     border-radius: 2px;
@@ -138,13 +149,14 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     color: #40bbea;
-    font-size: 14px;
+    //font-size: 14px;
     padding: 0;
     margin: 0;
     top: -10px;
     .pgn__form-control-floating-label-text {
       transform: none !important;
       font-size: 11px;
+      color: #425260;
     }
   }
 }
@@ -159,15 +171,18 @@ button#sign-in {
 }
 
 #forget-password-form {
-  max-width: 400px !important;
+  max-width: 350px !important;
   font-size: 14px !important;
   .pgn-transition-replace-group.position-relative { display: none }
   p {
-    color: #425260;
+    color: #425260 !important;
     font-size: 13px;
   }
   h2.h4 {
-    color: #425260;
+    color: #425260 !important;
     font-size: 16px;
+  }
+  p.mt-5\.5 {
+    display: none;
   }
 }
