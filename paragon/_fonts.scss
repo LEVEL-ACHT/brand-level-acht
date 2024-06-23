@@ -1,2 +1,29 @@
 // Add any font imports or definitions here
-//@import url("fonts.folder/fontawesome-webfont.woff2");
+@font-face {
+  font-family: 'ProximaNova-SemiBold';
+  src: url('./fonts-folder/ProximaNova/ProximaNova-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('./fonts-folder/ProximaNova/ProximaNova-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ProximaNova-Thin';
+  src: url('./fonts-folder/ProximaNova/ProximaNova-Thin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('./fonts-folder/ProximaNova/ProximaNova-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
