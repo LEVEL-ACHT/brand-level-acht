@@ -118,6 +118,23 @@ body {
       min-width: 300px !important;
       .mw-xs.mt-3.mb-2 {
         margin: 0 !important;
+        div#login-failure-alert {
+          padding: 10px;
+          border-radius: inherit;
+          line-height: normal;
+          margin-bottom: 40px !important;
+          span.pgn__icon.alert-icon {
+            display: none;
+          }
+          .alert-message-content {
+            color: #ab0d02;
+            font-size: 12px !important;
+            .alert-heading.h4 {
+              color: #ab0d02;
+              font-size: 12px !important;
+            }
+          }
+        }
       }
       #sign-in-form {
         #forgot-password {
@@ -131,7 +148,7 @@ body {
           height: auto !important;
         }
         .pgn__form-group:nth-child(1) {
-          margin: 20px 0px 50px;
+          margin: 20px 0px 40px;
         }
         .pgn__form-group:nth-child(2) {
           margin: 0 0 20px 0;
@@ -151,23 +168,19 @@ body {
   }
   .pgn__form-control-floating-label {
     font-family: ProximaNova-SemiBold;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     color: #40bbea;
     //font-size: 14px;
     padding: 0;
     margin: 0;
-    top: -10px;
+    top: -32px;
     .pgn__form-control-floating-label-text {
       transform: none !important;
       font-size: 11px;
       color: #425260;
     }
   }
-}
-
-nav.pgn__tabs.nav.nav-tabs {
-    border: none;
 }
 
 button#sign-in {
@@ -178,10 +191,19 @@ button#sign-in {
 #forget-password-form {
   max-width: 350px !important;
   font-size: 14px !important;
+  div#validation-errors {
+    padding: 10px;
+    border-radius: inherit;
+    line-height: normal;
+  }
   .pgn-transition-replace-group.position-relative { display: none }
-  p {
+  div#validation-errors {
+    display: none;
+  }
+  > p {
     color: #425260 !important;
     font-size: 13px;
+    margin-bottom: 40px !important;
   }
   h2.h4 {
     color: #425260 !important;
