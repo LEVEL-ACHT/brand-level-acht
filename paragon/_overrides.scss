@@ -3,9 +3,14 @@
 
 @font-face {
   font-family: 'ProximaNova-SemiBold';
+  src: url('ProximaNova-Semibold.eot');
+  src: url('ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('ProximaNova-Semibold.woff2') format('woff2'),
+    url('ProximaNova-Semibold.woff') format('woff'),
+    url('ProximaNova-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
-  src: url("./fonts-folder/proxima-nova-7.woff2") format('woff2');
+  font-display: swap;
 }
 
 body {
