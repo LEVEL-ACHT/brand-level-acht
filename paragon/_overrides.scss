@@ -1,18 +1,6 @@
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
 
-@font-face {
-  font-family: 'ProximaNova-SemiBold';
-  src: url('./fonts-folder/ProximaNova-SemiBold/ProximaNova-Semibold.eot');
-  src: url('./fonts-folder/ProximaNova-SemiBold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-    url('./fonts-folder/ProximaNova-SemiBold/ProximaNova-Semibold.woff2') format('woff2'),
-    url('./fonts-folder/ProximaNova-SemiBold/ProximaNova-Semibold.woff') format('woff'),
-    url('./fonts-folder/ProximaNova-SemiBold/ProximaNova-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
   background-color: #000;
   min-width: 300px;
@@ -52,7 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row !important;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 // main layout left column
@@ -78,7 +66,7 @@ body {
     align-items: center;
     justify-content: center !important;
     display: flex;
-    overflow: hidden;
+    //overflow: hidden;
   }
   .content {
     > div {
@@ -87,7 +75,7 @@ body {
     }
     > div:before {
       content: "LEVEL8";
-      font-family: ProximaNova;
+      font-family: ProximaNova-SemiBold;
       color: white;
       font-size: 30px;
       font-weight: 500;
@@ -140,7 +128,7 @@ body {
         #forgot-password {
           position: relative;
           color: #40bbea !important;
-          top: -60px;
+          top: -50px;
           font-size: 12px;
           width: auto;
           padding: 0;
@@ -151,7 +139,7 @@ body {
           margin: 20px 0px 40px;
         }
         .pgn__form-group:nth-child(2) {
-          margin: 0 0 20px 0;
+          margin: 0 0 10px 0;
         }
       }
     }
@@ -167,7 +155,7 @@ body {
     border-radius: 2px;
   }
   .pgn__form-control-floating-label {
-    font-family: ProximaNova-SemiBold;
+    font-family: ProximaNova-Bold;
     font-weight: 600;
     text-transform: uppercase;
     color: #40bbea;
